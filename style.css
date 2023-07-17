@@ -14,6 +14,20 @@ body {
   --common-color: #3a3a3a;
 }
 
+.btn-primary {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 2.5625rem;
+  background: #e02c6d;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+}
+.btn-primary svg {
+  vertical-align: middle;
+}
+
 ul {
   list-style: none;
 }
@@ -29,14 +43,21 @@ header {
   padding-top: 2rem;
 }
 /* nav */
-nav {
+
+.bigScreen {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  background-color: tomato;
+  margin-bottom: 3rem;
+}
+.mobile {
+  display: none;
 }
 ul {
   display: flex;
+}
+li {
+  list-style-type: none;
 }
 nav h4 {
   color: var(--common-color);
@@ -51,10 +72,77 @@ ul li a {
   font-weight: 600;
 }
 
+.header_container {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header_content {
+  width: 36rem;
+}
+.header_title {
+  color: var(--common-color);
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 4.375rem; /* 134.615% */
+  margin-bottom: 1rem;
+}
+.header_desc {
+  color: var(--common-color);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.header_img {
+  width: 29rem;
+  height: 29rem;
+  background-image: url('./images/Circle\ design.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header_img img {
+  width: 27rem;
+  position: relative;
+  top: 2.3rem;
+}
+
 /*----------- MEDIA QUERY -----------*/
 
 /* -------------- MOBILE SCREEN ----------- */
 @media screen and (max-width: 576px) {
+  .bigScreen {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header_container{
+    flex-direction: column-reverse;
+  }
+  .header_img {
+    width: 16rem;
+    height: 16rem;
+    margin-top: 1.4rem;
+  }
+  .header_img img {
+    width: 14rem;
+    top: 1.5rem;
+  }
+  .header_content {
+    width: 22rem;
+    text-align: center;
+    margin-top: 1.3rem;
+  }
+  .header_title {
+    font-size: 2.25rem;
+  }
+  .mobile svg{
+    vertical-align: middle;
+  }
+
 }
 
 /* ----------- TABLET SCREEN ----------- */
